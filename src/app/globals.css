@@ -1,8 +1,12 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #030014;
+  --foreground: #f3f4f6;
+
+  /* Custom Glow Colors */
+  --glow-cyan: rgba(6, 182, 212, 0.4);
+  --glow-purple: rgba(168, 85, 247, 0.4);
 }
 
 @theme inline {
@@ -12,15 +16,49 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  cursor: url('/cursor.svg') 4 4, auto; /* Uses the custom purple cursor you uploaded */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030014;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e1b4b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #312e81;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glow-text {
+  text-shadow: 0 0 20px var(--glow-cyan);
+}
+
+.glow-card {
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.glow-card:hover {
+  box-shadow: 0 0 40px rgba(168, 85, 247, 0.2);
 }

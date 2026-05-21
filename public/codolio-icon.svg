@@ -1,0 +1,17 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bgGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(64 64) rotate(90) scale(56)">
+      <stop stop-color="#1A1A24"/>
+      <stop offset="1" stop-color="#0B0B12"/>
+    </radialGradient>
+  </defs>
+  <circle cx="64" cy="64" r="64" fill="#06060B"/>
+  <circle cx="64" cy="64" r="57" fill="url(#bgGlow)" stroke="#37384A" stroke-width="2.5"/>
+
+  <g transform="translate(64 64)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-18 -10L-31 0L-18 10" stroke="#BFC3CF" stroke-width="10"/>
+    <path d="M18 -10L31 0L18 10" stroke="#BFC3CF" stroke-width="10"/>
+    <path d="M-4 15L4 -15" stroke="#BFC3CF" stroke-width="10"/>
+    <circle cx="0" cy="0" r="6" fill="#BFC3CF"/>
+  </g>
+</svg>
