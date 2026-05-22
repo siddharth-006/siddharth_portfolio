@@ -95,13 +95,13 @@ export function JourneyTimeline() {
               return (
                 <div key={index} className="relative flex items-center md:justify-between w-full">
                   
-                  {/* Left Side (Empty on mobile, Content or Empty on desktop) */}
-                  <div className={`hidden md:block w-[45%] ${!isEven ? 'order-1' : 'order-1 md:order-none opacity-0'}`}>
+                  {/* Left Side (desktop only) */}
+                  <div className={`hidden md:block w-[45%]`}>
                     {!isEven && <TimelineCard item={item} align="right" delay={index * 0.1} />}
                   </div>
 
                   {/* Center Node */}
-                  <div className="absolute left-[20px] md:left-1/2 transform -translate-x-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-gray-900 border-4 border-gray-800 z-10 shadow-[0_0_10px_rgba(0,0,0,0.5)] order-1 md:order-none">
+                  <div className="absolute left-[20px] md:left-1/2 transform -translate-x-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-gray-900 border-4 border-gray-800 z-10 shadow-[0_0_10px_rgba(0,0,0,0.5)]">
                     <motion.div 
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}
@@ -113,7 +113,7 @@ export function JourneyTimeline() {
                   </div>
 
                   {/* Right Side / Mobile Side */}
-                  <div className={`ml-16 md:ml-0 w-full md:w-[45%] ${isEven ? 'order-1' : 'order-1 md:order-none opacity-0 hidden md:block'}`}>
+                  <div className={`ml-16 md:ml-0 w-full md:w-[45%]`}>
                     {isEven && <TimelineCard item={item} align="left" delay={index * 0.1} />}
                     {/* Mobile always shows on this side */}
                     {!isEven && <div className="md:hidden"><TimelineCard item={item} align="left" delay={index * 0.1} /></div>}
